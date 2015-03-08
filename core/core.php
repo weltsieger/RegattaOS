@@ -1,0 +1,3 @@
+<?php
+// RegattaOS Core
+?>
