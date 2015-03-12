@@ -30,8 +30,8 @@ class Registry
     {
         if ( $this->isConstant( $key ) ) {
             die(
-                '<h1>Error: Cannot override Constant \'<em>'.$key.
-                '</em>\' in Registry!</h1>'
+                '<p>Error: Cannot override Constant \'<em>'.$key.
+                '</em>\' in Registry!</p>'
             );
         } else {
             $this->register[$key] = $value;
@@ -42,8 +42,8 @@ class Registry
         return $this->exists( $key ) ?
             $this->register[$key] :
             die(
-                '<h1>Error: Key \'<em>'.$key.
-                '</em>\' not found in Registry!</h1>'
+                '<p>Error: Key \'<em>'.$key.
+                '</em>\' not found in Registry!</p>'
             );
     }
     public function __call( $key, $args )
@@ -57,14 +57,13 @@ class Registry
     {
         if ( $this->isConstant( $key ) ) {
             die(
-                '<h1>Error: Cannot remove Constant \'<em>'.$key.
-                '</em>\' in Registry!</h1>'
+                '<p>Error: Cannot remove Constant \'<em>'.$key.
+                '</em>\' in Registry!</p>'
             );
         } elseif ( $this->exists( $key ) ) {
             unset( $this->register[$key] );
             return true;
         }
-
         return false;
     }
     public function exists( $key )
