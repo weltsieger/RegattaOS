@@ -3,6 +3,7 @@ class moduleCore {
 	function reg (){
 		return Registry::getInstance();	
 	}
+// database functions
 	function db_query($query, $param = array()){
 		$pdo = $this->reg()->pdo;
 		try{
@@ -75,5 +76,11 @@ class moduleCore {
 	function setStylesheet($file){
 		
 	}
+	function register($type,$var1,$var2 = null){
+		$modules = $this->reg()->modules;
+		if($var2 == null); $set2=false; else; $set2 = true; endif;
+		
+	}
+	
 }
 ?>
