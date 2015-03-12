@@ -12,7 +12,7 @@ class moduleLauncher {
           if(file_exists(ROS_MODULES . $module .'/index.php')){
             require_once ROS_MODULES . $module .'/index.php';
             if(class_exists($module)){
-            		 if($this->reg->keyExists($module)){
+            		 if($this->reg->exists($module)){
             		 	
             		 }
 			  $module_data = 'm_'.$module;
