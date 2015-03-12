@@ -2,7 +2,7 @@
 class Registry
 {
 
-    private static $instance = null; // Speichert die Instanz der Klasse
+    private static $instance = null;
     private $register = array();
     private $readOnly = array();
     private function __construct() {}
@@ -21,8 +21,8 @@ class Registry
             $this->readOnly[$key] = true;
         } else {
             die(
-                '<h1>Error: Constant \'<em>'.$key.'</em>\' is already created '.
-                'in Registry!</h1>'
+                '<p>Error: Constant \'<em>'.$key.'</em>\' is already created '.
+                'in Registry!</p>'
             );
         }
     }
